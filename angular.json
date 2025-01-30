@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/reliquias-app",
-            "baseHref": "/",
+            "baseHref": "/reliquia-aika/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -22,7 +22,10 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/_redirects"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
