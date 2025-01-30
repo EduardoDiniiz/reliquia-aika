@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://external-aika-br-api.cbmgames.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

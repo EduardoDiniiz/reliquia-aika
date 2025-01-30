@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Relíquias Liberadas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Relíquia</th>
+          <th>Personagem</th>
+          <th>Nível</th>
+          <th>Guilda</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let relic of relics">
+          <td>{{ relic.relic }}</td>
+          <td>{{ relic.char_name }}</td>
+          <td>{{ relic.char_level }}</td>
+          <td>{{ relic.guild_name }}</td>
+          <td>{{ relic.relic_date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
