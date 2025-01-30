@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RelicsService } from '../../services/relics.service';
+import { CommonModule } from '@angular/common';
 
 interface Relic {
   relic: string;
@@ -10,7 +11,9 @@ interface Relic {
 }
 
 @Component({
+  standalone: true,
   selector: 'app-relics-list',
+  imports: [CommonModule],
   templateUrl: './relics-list.component.html',  
   styleUrls: ['./relics-list.component.css']
 })
