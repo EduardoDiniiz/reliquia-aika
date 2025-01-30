@@ -1,24 +1,30 @@
 <div class="container">
+    <h1>AIKA CBM</h1>
     <h2>Relíquias Liberadas</h2>
     <table>
       <thead>
         <tr>
+          <th>Nação</th>
+          <th>Devir</th>
           <th>Relíquia</th>
           <th>Personagem</th>
           <th>Nível</th>
           <th>Guilda</th>
-          <th>Data</th>
+          <th>Data Estabilização</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let relic of relics">
+          <td>{{ obterNacao(relic.by_nation) }}</td>
+          <td>{{ obterDevir(relic.devir) }}</td>
           <td>{{ relic.relic }}</td>
           <td>{{ relic.char_name }}</td>
           <td>{{ relic.char_level }}</td>
           <td>{{ relic.guild_name }}</td>
-          <td>{{ relic.relic_date }}</td>
+          <td>{{ formatarData(relic.relic_date) }}</td>
         </tr>
       </tbody>
     </table>
+    <h4>Desenvolvido por DeathHealer</h4>
   </div>
   

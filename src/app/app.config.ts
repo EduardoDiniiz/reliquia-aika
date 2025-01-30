@@ -3,6 +3,7 @@ import { provideRouter, RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { RelicsListComponent } from './components/relics-list/relics-list.component';
+import { DatePipe } from '@angular/common';
 
 const routes = [
   { path: '', component: RelicsListComponent },
@@ -11,5 +12,5 @@ const routes = [
 ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [importProvidersFrom(RouterModule.forRoot(routes)), provideHttpClient(), provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]
+  providers: [DatePipe, importProvidersFrom(RouterModule.forRoot(routes)), provideHttpClient(), provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]
 };
